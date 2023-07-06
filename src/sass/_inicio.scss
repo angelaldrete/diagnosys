@@ -1,0 +1,36 @@
+.inicio {
+  &__nodata {
+    margin-bottom: 2.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & .card {
+      display: inline-block;
+      max-width: 30rem;
+      max-height: 20rem;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      will-change: background-color, color;
+      animation: slideCard 0.5s ease-in-out forwards 0.3s;
+      opacity: 0;
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+      h2 {
+        font-size: 3.6rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: var(--light-color);
+      }
+    }
+  }
+}

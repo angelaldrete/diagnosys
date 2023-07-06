@@ -1,0 +1,65 @@
+.login {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color) 50%,
+    var(--primary-color--gradient)
+  );
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideTitle 1s ease-in-out forwards;
+    will-change: transform;
+    animation-delay: 3s;
+  }
+
+  &__title {
+    opacity: 0;
+    &--light {
+      color: var(--light-color);
+    }
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .logo {
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    animation: slideModal 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    will-change: transform;
+  }
+
+  &__card {
+    background-color: var(--bg-color);
+    max-width: 50rem;
+    padding: 2rem 3rem;
+    animation: slideModal 1s ease-in-out forwards;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+}
+
+@keyframes slideTitle {
+  0% {
+    transform: translateY(-50%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -275%);
+  }
+}

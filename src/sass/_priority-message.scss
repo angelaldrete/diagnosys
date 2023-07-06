@@ -1,0 +1,50 @@
+.priority {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background-color: var(--secondary-color);
+
+  &-message {
+    z-index: 1;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &__message {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      margin: -2px;
+      background: linear-gradient(
+        90deg,
+        var(--warning-color) 0%,
+        var(--danger-color) 50%,
+        var(--warning-color) 50%,
+        var(--danger-color) 100%
+      );
+      background-size: 400% 400%;
+      animation: priority-warning 3s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes priority-warning {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

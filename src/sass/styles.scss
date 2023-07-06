@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+
+:root {
+  --primary-color: #1385ff;
+  --primary-color--gradient: #1363f6;
+  --secondary-color: #f3f3f3;
+  --bg-color: #f8f9fa;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #e11d30;
+  --success-color: #13ac37;
+  --warning-color: #fec416;
+  --info-color: #17a2b8;
+  --border-color: #ced4da;
+  --border-color-light: #f8f9fa;
+  --border-color-dark: #343a40;
+  --border-radius: 0.25rem;
+  --font-color: #212529;
+  --font-color-light: #f8f9fa;
+  --font-color-dark: #343a40;
+  --font-size: 1.6rem;
+  --nav-size: 250px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes slideCard {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@import "nav";
+@import "main";
+@import "btn";
+@import "logo";
+@import "card";
+@import "modal";
+@import "inicio";
+@import "recent-patients";
+@import "metrics";
+@import "priority-message";
+@import "search-bar";
+@import "consultations";
+@import "patients";
+@import "detail";
+@import "appform";
+@import "config";
+@import "login";

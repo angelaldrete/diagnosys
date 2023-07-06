@@ -1,0 +1,49 @@
+.detail {
+  &__consultas {
+    &__subtitle {
+      margin-top: 2rem;
+    }
+  }
+
+  &__info {
+    &__card {
+      animation: showSlideDown 0.5s ease-in-out;
+      margin-bottom: 2rem;
+    }
+    &__element {
+      &__value {
+        &__input {
+          margin-top: 1rem;
+          padding: 1rem;
+          width: 30rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    &__icon {
+      margin-left: 1rem;
+      opacity: 0.5;
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.detail__info__element__value__icon {
+  margin-left: 1rem;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}

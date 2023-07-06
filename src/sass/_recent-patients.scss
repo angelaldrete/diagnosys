@@ -1,0 +1,38 @@
+.recent-patients {
+  display: flex;
+  margin-bottom: 2rem;
+
+  &__patient {
+    flex: 1;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: all 0.1s ease-in-out;
+    animation: showSlideDown 0.2s ease-in-out forwards;
+    opacity: 0;
+
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+
+    &:hover {
+      background-color: var(--dark-color);
+      color: var(--light-color);
+    }
+  }
+  &__data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  &__last-consultation {
+    margin-bottom: 0.5rem;
+  }
+}

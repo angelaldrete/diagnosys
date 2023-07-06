@@ -1,0 +1,16 @@
+.patients {
+  &__item {
+    background-color: var(--secondary-color);
+    margin-bottom: 2rem;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    animation: slideCard 0.3s ease-in-out forwards;
+    opacity: 0;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      transform: scale(1.25);
+      cursor: pointer;
+    }
+  }
+}

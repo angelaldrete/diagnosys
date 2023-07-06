@@ -1,0 +1,45 @@
+main {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: calc(var(--nav-size) + 2rem);
+  padding-right: 4rem;
+  height: 100%;
+  overflow-x: hidden;
+
+  .title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.content {
+  margin-bottom: 2rem;
+}
+
+.appear {
+  opacity: 0;
+  animation: appear 0.1s ease-in-out forwards 0.1s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
