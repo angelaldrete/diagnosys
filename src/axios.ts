@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_DEMO === "true" ? "https://diagnosys-api.vercel.app/api" : "http://localhost:3000/api",
+  baseURL: import.meta.env.VITE_DEMO === "true" ? "https://diagnosys-api.vercel.app/api" : "http://localhost:3000/api",
 });
 
 api.interceptors.request.use(
